@@ -3,7 +3,7 @@
         <Section :first-of="true" :text="'Hey, Du hast heute den Jackpot gemacht! Denn du darfst heute einen virtuellen Tag mit mir verbringen, um mich besser kennen zu lernen.'"></Section>
         <border></border>
         <Section :first-of="false" :text="'All die Steckbriefe und Kurzinformationen finde ich ein bisschen unpersönlich. Lass uns lieber ein Abenteuer erleben!'"></Section>
-        <section-skew :first-of="false" :text="'Also swipe einfach nach Links und los geht´s!'"></section-skew>
+        <section-skew :first-of="false" :text="'Also swipe einfach nach Links und los geht´s! b ubodenjukanjdeejkn'"></section-skew>
     </div>
 </template>
 

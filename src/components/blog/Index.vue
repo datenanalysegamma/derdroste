@@ -72,9 +72,14 @@
                 background-color: var(--section-bg);
                 width: calc(100% - 54px);
                 padding: 20px 25px 30px;
-                &::before {
+
+                &::before,
+                &::after {
                     content: '';
                     position: absolute;
+                }
+
+                &::before {
                     top: -10px;
                     left: 0;
                     transform: rotate(-3deg);
@@ -82,15 +87,51 @@
                     height: 20px;
                     border-top: 2px solid var(--navigation-mobile-color);
                     background-color: var(--section-bg);
+
+                    @media (min-width: 439px) {
+                        height: 25px;
+                        top: -13px;
+                    }
+                    @media (min-width: 767px) {
+                        height: 30px;
+                        top: -18px;
+                    }
+                    @media (min-width: 1439px) {
+                        height: 60px;
+                        top: -24px;
+                    }
+
+                    @media (min-width: 1599px) {
+                        height: 60px;
+                        top: -29px;
+                    }
                 }
                 &::after {
-                    content: '';
-                    position: absolute;
                     right: -2px;
                     top: -17px;
                     height: 23px;
                     width: 2px;
                     background-color: var(--navigation-mobile-color);
+
+                    @media (min-width: 439px) {
+                        height: 28px;
+                        top: -22px;
+                    }
+
+                    @media (min-width: 767px) {
+                        height: 40px;
+                        top: -32px;
+                    }
+
+                    @media (min-width: 1439px) {
+                        height: 66px;
+                        top: -44px;
+                    }
+
+                    @media (min-width: 1599px) {
+                        height: 70px;
+                        top: -55px;
+                    }
                 }
 
                 .date {
@@ -101,37 +142,88 @@
                     span {
                         color: var(--navigation-primary-color);
                         font-size: 12px;
+
+                        @media (min-width: 767px) {
+                            font-size: 16px;
+                        }
+                        @media (min-width: 1023px) {
+                            font-size: 18px;
+                        }
+                        @media (min-width: 1439px) {
+                            font-size: 20px;
+                        }
                     }
                 }
 
                 .title {
-                    padding: 10px 0 10px;
                     span {
+                        display: block;
+                        padding: 10px 0 0;
                         font-size: 22px;
                         font-weight: 900;
                         color: var(--navigation-primary-color);
+
+                        @media (min-width: 767px) {
+                            font-size: 26px;
+                            padding: 15px 0 0;
+                        }
+                        @media (min-width: 1023px) {
+                            font-size: 30px;
+                            padding: 20px 0 0;
+                        }
+                        @media (min-width: 1439px) {
+                            font-size: 34px;
+                            padding: 30px 0 0;
+                        }
                     }
                 }
 
                 .description {
                     span {
+                        display: block;
+                        padding: 10px 0;
                         font-size: 18px;
+
+                        @media (min-width: 767px) {
+                            padding: 15px 0;
+                            font-size: 22px;
+                        }
+                        @media (min-width: 1023px) {
+                            padding: 20px 0;
+                            font-size: 24px;
+                        }
+                        @media (min-width: 1439px) {
+                            font-size: 28px;
+                            padding: 30px 0;
+                        }
                     }
                 }
 
                 .anchor {
                     display: block;
                     list-style: none;
-                    padding: 10px 8px;
+                    padding: 10px 16px;
                     background-color: var(--main-bar-color);
                     text-align: center;
-                    width: 160px;
+                    width: fit-content;
                     text-decoration: none;
                     color: var(--navigation-mobile-color);
                     font-size: 20px;
                     font-weight: 600;
                     filter: brightness(1.1);
                     margin: 25px auto 0;
+
+                    @media (min-width: 767px) {
+                        font-size: 24px;
+                        padding: 15px 20px;
+                    }
+                    @media (min-width: 1023px) {
+                        font-size: 26px;
+                        padding: 20px 24px;
+                    }
+                    @media (min-width: 1439px) {
+                        font-size: 30px;
+                    }
                 }
             }
         }

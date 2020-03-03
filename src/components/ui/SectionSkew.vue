@@ -34,12 +34,15 @@
 
             @media (min-width: 767px) {
                 padding: 60px 35px;
+                width: calc(100% - 75px);
             }
             @media (min-width: 1023px) {
                 padding: 80px 50px;
+                width: calc(100% - 104px);
             }
             @media (min-width: 1439px) {
                 padding: 100px 70px;
+                width: calc(100% - 144px);
             }
 
             &::before,
