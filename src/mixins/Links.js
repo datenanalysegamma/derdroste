@@ -19,14 +19,9 @@ export const Links = {
                 },
                 {
                     id: 3,
-                    title: 'Persönliches',
-                    url: '/personal'
-                },
-                {
-                    id: 4,
                     title: 'Blog',
                     url: '/blog'
-                },
+                }
             ]
         }
     }
