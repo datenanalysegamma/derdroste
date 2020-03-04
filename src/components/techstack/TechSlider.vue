@@ -5,17 +5,17 @@
                 <template v-for="stack in stacks">
                     <div class="stack"
                          :key="stack.id"
-                         :style="'transform: rotateY(' + (stack.id * getDegree) + 'deg) translateZ(' + getDegree * 12 + 'px);'">
+                         :style="'transform: rotateY(' + (stack.id * getDegree) + 'deg) translateZ(' + getDegree * imageMargin + 'px);'">
                         <div
                             class="stack-wrapper"
                             :class="{'is-active': activeDescription === stack.id}">
-                            <img :src="stack.url" alt="#">
+                            <img draggable="false" :src="stack.url" alt="#">
                         </div>
                     </div>
                 </template>
             </div>
         </div>
-        <div class="text-center">
+        <div class="text-center description">
             <transition name="fade" mode="out-in" >
                 <template v-for="stack in stacks">
                     <div v-if="activeDescription === stack.id" :key="stack.id">
@@ -39,7 +39,8 @@
         data () {
             return {
                 curveSlider: 0,
-                activeDescription: 0
+                activeDescription: 0,
+                imageMargin: 12
             }
         },
         methods: {
@@ -65,6 +66,11 @@
                 const deg = 360 / this.stacks.length;
                 return deg
             }
+        },
+        created() {
+           if (window.innerWidth > 1023) {
+               this.imageMargin = 24
+           }
         }
     }
 </script>
@@ -80,6 +86,10 @@
             position: relative;
             perspective: 1000px;
             overflow: hidden;
+
+            @media (min-width: 1024px) {
+                height: 240px;
+            }
 
             .slider {
                 height: 100%;
@@ -113,12 +123,21 @@
                             background: rgb(255,255,255);
                             background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(255,255,255,0.6250875350140056) 48%, rgba(255,255,255,0) 100%);
                             z-index: -1;
+
+                            @media (min-width: 1024px) {
+                                width: 120px;
+                                height: 120px;
+                            }
                         }
 
                         img {
                             width: 50px;
                             height: auto;
                             display: block;
+
+                            @media (min-width: 1024px) {
+                                width: 80px;
+                            }
                         }
 
                     }
@@ -133,14 +152,30 @@
         opacity: 0;
     }
 
-    p {
-        margin: 5px;
-        font-size: 16px;
-        color: var(--main-bar-color);
-    }
+    .description {
+        p {
+            margin: 15px 0 5px;
+            font-size: 16px;
+            color: var(--main-bar-color);
 
-    h2 {
-        margin: 0;
-        font-size: 24px;
+            @media (min-width: 1024px) {
+                margin: 20px;
+                font-size: 24px;
+            }
+        }
+
+        h2 {
+            margin: 0;
+            font-size: 24px;
+
+            @media (min-width: 1024px) {
+                font-size: 32px;
+
+            }
+        }
+
+        @media (min-width: 1024px) {
+            margin-left: 35px;
+        }
     }
 </style>

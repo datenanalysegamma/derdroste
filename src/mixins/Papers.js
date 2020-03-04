@@ -26,11 +26,6 @@ export const Papers = {
                             id: 3,
                             title: 'Grösse:',
                             text: '1.88m'
-                        },
-                        {
-                            id: 4,
-                            title: 'Single',
-                            text: ''
                         }
                     ]
                 },

@@ -2,7 +2,7 @@
     <header class="header">
         <div class="menu-toggle" :class="{'is-active': flyOut}" @click="toggleMenu">
             <svg>
-                <use xlink:href="../assets/gear-alt.svg#gear-alt"></use>
+                <use xlink:href="@/assets/gear-alt.svg#gear-alt"></use>
             </svg>
         </div>
         <div class="main-bar" :class="{'is-active': flyOut}">
