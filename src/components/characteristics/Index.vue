@@ -37,12 +37,13 @@
 <script>
     import { Papers } from '../../mixins/Papers'
     import SectionSkew from "../ui/SectionSkew";
+    import {ScrollTop} from "../../mixins/ScrollTop";
 
     export default {
         name: "Index",
         components: {SectionSkew},
         mixins: [
-            Papers
+            Papers, ScrollTop
         ],
         data () {
             return {
@@ -72,6 +73,7 @@
                 height: 400px;
                 display: flex;
                 justify-content: center;
+                overflow: hidden;
 
                 @media (min-width: 359px) {
                     width: 300px;

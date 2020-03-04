@@ -16,12 +16,13 @@
 <script>
     import { Links } from '../../mixins/Links'
     import Section from "../ui/Section";
+    import {ScrollTop} from "../../mixins/ScrollTop";
 
     export default {
         name: "Choose",
         components: {Section},
         mixins: [
-            Links
+            Links, ScrollTop
         ]
     }
 </script>

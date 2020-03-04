@@ -28,11 +28,12 @@
     import {store} from "../../store/Store";
     import {Blogs} from "../../mixins/Blogs";
     import Border from '../ui/Border'
+    import {ScrollTop} from "../../mixins/ScrollTop";
 
     export default {
         name: "Detail",
         components: {Border},
-        mixins: [Blogs],
+        mixins: [Blogs, ScrollTop],
         computed: {
             stateBlog () {
                 return store.state.blog

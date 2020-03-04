@@ -25,12 +25,13 @@
     import Section from "../ui/Section";
     import {Blogs} from '../../mixins/Blogs'
     import {store} from "../../store/Store";
+    import {ScrollTop} from "../../mixins/ScrollTop";
     // import axios from 'axios'
 
     export default {
         name: "Index",
         components: {Section},
-        mixins: [Blogs],
+        mixins: [Blogs, ScrollTop],
         methods: {
           setBlog (id) {
               store.commit('setBlog', id)

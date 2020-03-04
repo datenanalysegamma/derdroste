@@ -8,13 +8,17 @@
 <script>
     import TechSlider from './TechSlider'
     import SectionSkew from "../ui/SectionSkew";
+    import {ScrollTop} from "../../mixins/ScrollTop";
 
     export default {
         name: "Index",
         components: {
             SectionSkew,
             TechSlider
-        }
+        },
+        mixins: [
+            ScrollTop
+        ]
     }
 </script>
 
